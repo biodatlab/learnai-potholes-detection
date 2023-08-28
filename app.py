@@ -31,10 +31,9 @@ def main():
         outputs=imageout,
         title="Potholes detection",
         interpretation="default",
-    ).launch(debug="True", share="True")
-
+    )
     # launch demo
-    interface.launch()
+    interface.launch(enable_queue=True)
 
 if __name__ == "__main__":
     main() 
