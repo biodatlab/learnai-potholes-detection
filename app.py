@@ -22,18 +22,18 @@ def inference(gr_input):
 
 
 def main():
-    imagein = gr.inputs.Image(label="Input Image", type="pil")
-    imageout = gr.outputs.Image(label="Predicted Image", type="pil")
+    imagein = gr.Image(label="Input Image", type="pil")
+    imageout = gr.Image(label="Predicted Image", type="pil")
 
     interface = gr.Interface(
         fn=inference,
         inputs=imagein,
         outputs=imageout,
         title="Potholes detection",
-        interpretation="default",
     )
+
     # launch demo
-    interface.launch(enable_queue=True)
+    interface.launch()
 
 if __name__ == "__main__":
     main() 
